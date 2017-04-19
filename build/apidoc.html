@@ -135,15 +135,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.tingodb.toString">
-            function <span class="apidocSignatureSpan">tingodb.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <a class="apidocElementLiA" href="#apidoc.element.tingodb.tstream">
             function <span class="apidocSignatureSpan">tingodb.</span>tstream
             <span class="apidocSignatureSpan">(cursor, options)</span>
@@ -1594,37 +1585,6 @@
 	this._get = new Function(&#x22;obj&#x22;, &#x22;return &#x22; + (this._array ? getter.native3() : getter.native()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.tingodb.toString" id="apidoc.element.tingodb.toString">
-        function <span class="apidocSignatureSpan">tingodb.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-					// it&#x27;s ok also to not provide id, then it will be generated
-					rooms.insert({name:&#x22;room_&#x22;+i,_idHome:homeId}, function (err, room) {
-						console.log(room[0]);
-						i--;
-						if (i==0) {
-							// now lets assume we serving request like
-							// /rooms?homeid=_some_string_
-							var query = &#x22;/rooms?homeid=&#x22;+homeId.<span class="apidocCodeKeywordSpan">toString</span>();
-							// dirty code to get simulated GET variable
-							var getId = query.match(&#x22;homeid=(.*)&#x22;)[1];
-							console.log(query, getId)
-							// typical code to get id from external world
-							// and use it for queries
-							rooms.find({_idHome:new engine.ObjectID(getId)})
-								.count(function (err, count) {
-...</pre></li>
     </ul>
 
 
